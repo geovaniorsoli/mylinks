@@ -1,14 +1,8 @@
-// app/layout.tsx
-import {Providers} from "./providers";
 
-export default function RootLayout({children}: { children: React.ReactNode }) {
+import Navbar from "../components/navbar"
+export default function App() {
   return (
-    <html lang="en" className='dark'>
-      <body>
-        <Providers>
-          {children}
-        </Providers>
-      </body>
-    </html>
-  );
+    <Navbar name="geovaniorsoli"/>
+
+  )
 }

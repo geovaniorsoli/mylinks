@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar"
-import style from "..styles/profile.module.css"
+import style from "../styles/profile.module.css"
 import Image from "next/image"
 import Link from "next/link"
 export default function geovaniorsoli() {

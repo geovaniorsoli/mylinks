@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -13,13 +13,21 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 
-import style from '../styles/home.module.css';
+import style from '../styles/nav.module.css';
 
-export default function NavPersonalizada({ name }) {
+export default function NavPersonalizada({ name, copylink }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const copyInputRef = useRef(null);
+
+  const handleCopy = () => {
+    if (copyInputRef.current) {
+      copyInputRef.current.select();
+      document.execCommand("copy");
+    }
+  };
 
   return (
-    <Navbar>
+    <Navbar className={style.nav}>
       <NavbarBrand>
         <p className="font-bold text-inherit">{name}</p>
       </NavbarBrand>
@@ -32,19 +40,22 @@ export default function NavPersonalizada({ name }) {
           </Button>
           <Modal isOpen={isOpen} onClose={onClose} isDismissable={false}>
             <ModalContent>
-              <ModalHeader className="flex flex-col gap-1">copiar link</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1">Compartilhar</ModalHeader>
               <ModalBody>
+                <input
+                  type="text"
+                  value={copylink}
+                  ref={copyInputRef}
+                  readOnly
+                  style={{ position: "absolute", left: "-9999px" }}
+                />
                 <p>
-                  OIOIOOIOI
+                  {copylink}
                 </p>
               </ModalBody>
               <ModalFooter>
-                <Button color="danger" variant="light" onClick={onClose}>
-                  Close
-                </Button>
-                <Button color="primary" onClick={onClose}>
-                  Action
-                </Button>
+                <Button onClick={onClose}>Fechar</Button>
+                <Button color="primary" onClick={handleCopy}> Copiar </Button>
               </ModalFooter>
             </ModalContent>
           </Modal>

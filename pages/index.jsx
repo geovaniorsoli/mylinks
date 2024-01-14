@@ -1,8 +1,8 @@
-
 import Navbar from "../components/navbar"
 export default function App() {
   return (
-    <Navbar name="geovaniorsoli"/>
-
+    <>
+    <Navbar name="geovaniorsoli" copylink="geovaniorsli"/>
+    </>
   )
 }

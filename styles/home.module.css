@@ -1,10 +1,20 @@
-.colorBlue{
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 5px;
+.title{
+    font-size: 4rem;
+    margin: 0 auto;
+    color: #03060b;
 }
 
+.description{
+    font-size: 2rem;
+    display: flexbox;
+    color: #7d8287;
+    margin-top: -10px;
+}
 
-.nav{
-    background-color: #0000ff;
- }
+.container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    align-content: center;
+}

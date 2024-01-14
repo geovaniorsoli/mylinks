@@ -1,4 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@font-face {
+  font-family: medium;
+  src: url(../public/fonts/OverusedGrotesk-Medium.ttf);
+}
+
+@font-face {
+  font-family: semibold;
+  src: url(../public/fonts/OverusedGrotesk-SemiBold.ttf);
+}
+
+*{
+  font-family: medium;
+}
+
+body{
+  margin: 0;
+}
 

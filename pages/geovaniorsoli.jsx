@@ -1,25 +1,28 @@
-import Navbar from "../components/navbar"
+import Navbar from "@/components/Navbar"
+import style from "../styles/profile.module.css"
 import Image from "next/image"
-import style from "../styles/link.module.css"
-import { Link, Button} from "@nextui-org/react"
+import Link from "next/link"
 export default function geovaniorsoli() {
     return (
         <>
-            <Navbar name="geovaniorsoli" copylink="geovani" />
-            <Image src="/pic.png" width={200} height={200} className={style.avatar} />
-            <h1 className={style.name}>geovani orsoli</h1>
-            <h2 className={style.description}> desenvolvedor web</h2>
-
-            <div className={style.container}>
-                <Link className={style.link} href="https://github.com/geovaniorsoli"> Portfolio </Link>
-                <Link className={style.link} href="https://github.com/geovaniorsoli"> Github </Link>
-                <Link className={style.link} href="https://github.com/geovaniorsoli"> Currículo </Link>
-                <Link className={style.link} href="https://github.com/geovaniorsoli"> Instagram </Link>
-                <Link className={style.link} href="https://x.com/geovaniorsoli"> X </Link>
+            <Navbar name="@geovaniorsoli" />
+            <div className={style.imgContainer}>
+                <Image className={style.img} src="/pic.png" width={200} height={200} />
             </div>
 
-            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+            <div className={style.NameContainer}>
+                <h1 className={style.name}> Geovani Orsoli </h1>
+                <h2 className={style.description}> Desenvolvedor web</h2>
+            </div>
+
+            <div className={style.linksContainer}>
+                <Link className={style.link} href="https://geovaniorsoli.vercel.com"> Portfolio </Link>
+                <Link className={style.link} href="https://github.com/geovaniorsoli"> Github </Link>
+                <Link className={style.link} href="https://www.instagram.com/geovaniorsoli/"> Instagram </Link>
+                <Link className={style.link} href="https://www.instagram.com/berg.skt/"> Instagram - skate </Link>
+                <Link className={style.link} href="https://x.com/geovaniorsoli"> X </Link>
+                <Link className={style.link} href="https://nowecompany.com.br"> nowe company </Link>
+            </div>
         </>
-    )
+  )
 }

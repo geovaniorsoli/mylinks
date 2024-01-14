@@ -1,0 +1,36 @@
+.navBarBody{
+    background-color: #f8f8fc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.navBarButton{
+    margin: 0 3rem;
+    background-color:#171c24;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.name{
+    margin-left: 3rem;
+    color: #171c24;
+}
+
+@media (max-width:600px){
+    .navBarButton{
+        margin: 0 1rem;
+    }
+    
+    .name{
+        margin-left: 1rem;
+        font-size: 1rem;
+    }
+}
+

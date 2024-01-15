@@ -16,7 +16,7 @@ export default function geovaniorsoli() {
             </div>
 
             <div className={style.linksContainer}>
-                <Link className={style.link} href="https://geovaniorsoli.vercel.com"> Portfolio </Link>
+                <Link className={style.link} href="https://geovaniorsoli.vercel.app"> Portfolio </Link>
                 <Link className={style.link} href="https://github.com/geovaniorsoli"> Github </Link>
                 <Link className={style.link} href="https://www.instagram.com/geovaniorsoli/"> Instagram </Link>
                 <Link className={style.link} href="https://www.instagram.com/berg.skt/"> Instagram - skate </Link>

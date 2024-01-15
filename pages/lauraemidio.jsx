@@ -16,7 +16,7 @@ export default function profile() {
             </div>
 
             <div className={style.linksContainer}>
-                <Link className={style.link} href="boxd.it/3fRt9"> Letterbox </Link>
+                <Link className={style.link} href="https://letterboxd.com/ldee/"> Letterbox </Link>
                 <Link className={style.link} href="https://www.instagram.com/_lauraemidio/"> Instagram </Link>
                 <Link className={style.link} href="https://twitter.com/lauraemid"> X </Link>
             </div>
